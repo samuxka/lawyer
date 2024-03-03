@@ -1,0 +1,300 @@
+:root {
+    --text-color-dark: #fdfdfd;
+    --text-color-light: #242424;
+    --second-text-color-light: #3d3d3d;
+    --second-text-color-dark: #cccccc;
+    --background-light: #b3b3b3;
+    --main-color: #f2b138;
+    --second-main-color: #f2d95c; 
+
+    --h1-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.5rem;
+
+    --transition-1: all .50s ease;
+}
+
+@font-face {
+    font-family: qatar-bold;
+    src: url('font/QATAR2022ARABIC-BOLD.TTF');
+}
+
+@font-face {
+    font-family: qatar-heavy;
+    src: url('font/QATAR2022ARABIC-HEAVY.TTF');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--background-light);
+    transition: var(--transition-1);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 5%;
+    background: transparent;
+    z-index: 1000;
+}
+
+header.sticky {
+    padding: 8px 5%;
+    background: transparent;
+    backdrop-filter: blur(35px);
+}
+
+header .logo a {
+    color: var(--text-color-light);
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: qatar-bold, sans-serif;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+header nav ul li a {
+    color: var(--text-color-light);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition-1);
+}
+
+header nav ul li a:hover {
+    color: var(--second-main-color);
+    transition: var(--transition-1);
+}
+
+header nav ul i {
+    color: var(--text-color-light);
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.home .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.home .container .content {
+    max-width: 50%;
+}
+
+.home .container .content h1 {
+    font-family: qatar-bold, sans-serif;
+    font-weight: 800;
+    font-size: var(--h1-font);
+    margin-bottom: 50px;
+}
+
+.home .container .content p {
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.home .container .content a {
+    font-weight: 600;
+    color: var(--text-color-dark);
+    background: var(--second-main-color);
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: var(--transition-1);
+}
+
+.home .container .content a:hover {
+    color: var(--second-main-color);
+    background: transparent;
+    border: 2px solid var(--second-main-color);
+    transition: var(--transition-1);
+}
+
+.home .container .img img {
+    width: 400px;
+    height: auto;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+    transition: var(--transition-1);
+}
+
+.about .container .img{
+    width: 50%;
+}
+
+.about .container .img img{
+    width: 70%;
+}
+
+.about .container .content{
+    width: 50%;
+}
+
+.about .container .content span{
+    font-weight: lighter;
+    color: var(--second-text-color-light);
+}
+
+.about .container .content h2{
+    text-align: left;
+    font-size: var(--h2-font);
+    color: var(--second-main-color);
+    font-family: qatar-heavy;
+    margin: -10px 0 20px;
+}
+
+.about .container .content p{
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about .container .content ul{
+    display: flex;
+}
+.about .container .content ul li a{
+    display: inline-flex;
+    align-items: start;
+    justify-content: flex-start;
+    margin: 0px 10px 0px 0px;
+
+    font-size: 30px;
+    color: var(--text-color-light);
+    transition: var(--transition-1);
+}
+
+.about .container .content ul li a:hover{
+    color: var(--second-main-color);
+    transform: translateY(-5px);
+    transition: var(--transition-1);
+}
+
+.services .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.services .container .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services .container .head span{
+    text-align: center;
+    font-weight: lighter;
+    color: var(--second-text-color-light);
+    margin-bottom: -10px;
+}
+
+
+.services .container .head h2{
+    font-size: var(--h2-font);
+    color: var(--text-color-light);
+    text-align: center;
+    font-family: qatar-heavy, sans-serif;
+    letter-spacing: 2px;
+}
+
+.services .container .rows {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.services .container .rows .row {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--text-color-dark);
+    transition: var(--transition-1);
+    box-shadow: 0px 0px 10px 0px var(--second-text-color-light);
+}
+
+.services .container .rows .row:hover {
+    transform: translateY(-10px);
+    transition: var(--transition-1);
+    box-shadow: 0px 10px 15px 0px var(--second-text-color-light);
+}
+
+.services .container .rows .row h3{
+    margin: 10px 5%;
+    color:  var(--text-color-light);
+    font-size: 1.5rem;
+}
+
+.services .container .rows .row p{
+    margin: 0 5% 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--second-text-color-light);
+}
+
+.services .container .rows .row img {
+    width: 100%;
+    display: block;
+    transition: all 0.50s ease;
+}
+
+.report .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    width: 100%;
+}
+
+.report .container .video{
+    width: 50%;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+}
